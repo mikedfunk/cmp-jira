@@ -41,7 +41,6 @@ function source:complete(_, callback)
   local req_url = utils.get_request_url(self.config)
 
   -- run curl command
-  print(vim.inspect(parsed_issues))
   curl.get(req_url, {
     auth = utils.get_basic_auth(self.config),
     callback = function(out)
